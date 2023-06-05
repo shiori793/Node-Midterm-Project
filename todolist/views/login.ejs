@@ -1,0 +1,29 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+	<h1>Login</h1>
+</div>
+
+<div class="box">
+	<form action="/auth/login" method="post">
+        <div class="item">
+		<input
+			type="email"
+			name="email"
+			placeholder="Email"
+			autocomplete="off"
+		/>
+	</div>
+	<div class="item">
+        <input
+			type="password"
+			name="password"
+			placeholder="Password"
+			autocomplete="off"
+		/>
+	</div>
+		<button type="submit" name="login" id="login-button">Login</button>
+		<a href="/auth/register">Register</a>
+</div>
+
+<%- include("footer") -%>

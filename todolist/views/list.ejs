@@ -1,0 +1,67 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+	<h1><%= listTitle %></h1>
+</div>
+
+<div class="box newItemBox">
+	<form action="/list/" method="post">
+		<div class="item">
+			<input
+				type="text"
+				name="newItem"
+				placeholder="New Item"
+				autocomplete="off"
+				id="newItem"
+			/>
+			<button type="submit" name="list" value=<%=listTitle %>
+				>
+				<i class="fa-solid fa-plus"></i>
+			</button>
+		</div>
+		<textarea
+			rows="3"
+			cols="30"
+			name="newComment"
+			id="newComment"
+			class="close"
+		></textarea>
+	</form>
+</div>
+
+<div class="box">
+	<% newListItems.forEach(item => { %>
+	<div class="item showItem">
+		<form action="/list/like" method="post">
+			<button type="submit" id="like-button">
+				<% if(item.like){ %>
+				<i class="fa-solid fa-heart"></i>
+				<% } else { %>
+				<i class="fa-regular fa-heart"></i>
+				<% } %>
+			</button>
+			<input type="hidden" name="itemId" value=<%=item._id %> />
+			<input type="hidden" name="listName" value=<%=listTitle %> />
+		</form>
+		<input type="text" value=<%=item.name %> readOnly class='listItem'/>
+		<form action="/list/delete" method="post">
+			<button type="submit" id="delete-button">
+				<i class="fa-solid fa-trash"></i>
+			</button>
+			<input type="hidden" name="itemId" value=<%=item._id %> />
+			<input type="hidden" name="listName" value=<%=listTitle %> />
+		</form>
+	</div>
+	<div class="item editItem" style="display: none">
+		<form action="/list/update" method="post">
+			<input type="text" value=<%=item.name %> name="itemName" class='editElement'>
+			<textarea rows="3" cols="30" name="comment" class='editElement'><%= item.comment %></textarea>
+			<input type="hidden" name="itemId" value=<%=item._id %> />
+			<input type="hidden" name="listName" value=<%=listTitle %> />
+			<div><button type="submit" id="save-button">Save</button></div>
+		</form>
+	</div>
+	<% }); %>
+</div>
+
+<%- include("footer") -%>

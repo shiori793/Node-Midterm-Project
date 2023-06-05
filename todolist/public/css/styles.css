@@ -1,0 +1,134 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+body {
+  background-color: transparent !important;
+}
+
+h1 {
+  color: #fff !important;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#heading {
+  background-color: #A683E3;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+.item {
+  text-align: center;
+  margin: auto 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  border-width: 0;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  margin: auto;
+}
+
+textarea {
+  text-align: center;
+  height: 100px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 80%;
+  margin: auto;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#register-button, #login-button {
+  width: 90%;
+  border-radius: 20px !important;
+  margin: 1rem auto;
+}
+
+#delete-button {
+  background-color: transparent;
+  color: rgb(237, 77, 77);
+}
+
+#like-button {
+  background-color: transparent;
+  color: coral;
+}
+
+#save-button {
+  width: 40%;
+  border-radius: 10px !important;
+  margin-bottom: 1rem;
+}
+
+.close {
+  display: none
+}

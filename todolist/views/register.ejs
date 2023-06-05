@@ -1,0 +1,41 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+	<h1>Register</h1>
+</div>
+
+<div class="box">
+	<form action="/auth/register" method="post">
+		<div class="item">
+			<input
+				type="text"
+				name="username"
+				placeholder="User Name"
+				autocomplete="off"
+				required
+			/>
+		</div>
+		<div class="item">
+			<input
+				type="email"
+				name="email"
+				placeholder="Email"
+				autocomplete="off"
+				required
+			/>
+		</div>
+		<div class="item">
+			<input
+				type="password"
+				name="password"
+				placeholder="Password"
+				autocomplete="off"
+				required
+			/>
+		</div>
+		<button type="submit" name="register" id="register-button">Register</button>
+		<a href="/auth/login">Login</a>
+	</form>
+</div>
+
+<%- include("footer") -%>
