@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5001;
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
+mongoose.connect(`mongodb+srv://shiorifujiicb:${process.env.MONGO_PASSWORD}@cluster0.d9cumcp.mongodb.net/todolistDB`, {useNewUrlParser: true});
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
