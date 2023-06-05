@@ -93,4 +93,9 @@ const loginController = (req, res) => {
   }
 };
 
-export { registerController, loginController };
+const logoutController = (req, res) => {
+  res.cookie("token", '');
+  res.redirect('/');
+}
+
+export { registerController, loginController, logoutController };
