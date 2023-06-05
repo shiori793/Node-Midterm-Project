@@ -22,12 +22,12 @@ app.use(cookieParser());
 app.use(express.static("public"));
 app.use(cors()); 
 
-app.get("/about", function(req, res){
-  res.render("about");
+app.get("/", function(req, res){
+  res.redirect("/auth/login");
 });
 
 app.use("/auth", authRoutes);
-app.use("/list", listRoutes)
+app.use("/list", listRoutes);
 
 app.listen(PORT, function() {
   console.log(`Server started on port ${PORT}`);
